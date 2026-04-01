@@ -6,6 +6,7 @@ import DashboardScreen from "../Screen/DashboardScreen";
 import { View, Text } from "react-native";
 import WorkoutScreen from "../Screen/WorkoutScreen";
 import ProfileScreen from "../Screen/ProfileScreen";
+import WaterScreen from "../Screen/WaterScreen";
 const Tab = createBottomTabNavigator();
 
 

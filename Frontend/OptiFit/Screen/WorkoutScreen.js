@@ -12,6 +12,7 @@ UIManager
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { SafeAreaView } from "react-native-safe-area-context";
+import api from "../services/api";
 if (
   Platform.OS === "android" &&
   UIManager.setLayoutAnimationEnabledExperimental
@@ -339,10 +340,38 @@ Estimated Calories Burned
 
 </View>
 
-<TouchableOpacity style={styles.saveBtn}>
-<Text style={styles.saveText}>
-Save Workout
-</Text>
+<TouchableOpacity
+  style={styles.saveBtn}
+  onPress={async () => {
+    try {
+      if (!duration) {
+        alert("Enter duration");
+        return;
+      }
+
+      // ✅ FIX: map frontend type → backend type
+      let backendType = "cardio";
+
+      if (type === "strength") {
+        backendType = "strength";
+      } else {
+        backendType = "cardio";
+      }
+
+      await api.post("/workout/log", {
+        type: backendType,
+        duration: Number(duration),
+        intensity: "moderate",
+      });
+
+      alert("Workout saved ✅");
+
+    } catch (error) {
+      console.log(error.response?.data || error.message);
+    }
+  }}
+>
+  <Text style={styles.saveText}>Save Workout</Text>
 </TouchableOpacity>
 
 </>
