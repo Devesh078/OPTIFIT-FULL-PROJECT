@@ -8,53 +8,91 @@ import {
   TextInput,
   TouchableOpacity,
   ScrollView,
+  Alert,
+  ActivityIndicator,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 export default function ProfileSetupScreen({ navigation, route }) {
-  const { email, password } = route.params;
+  const { email, password, name: googleName, googleId, isGoogleUser } = route.params;
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState(googleName || "");
   const [age, setAge] = useState("");
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [gender, setGender] = useState("");
   const [goal, setGoal] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleContinue = async () => {
     if (!name || !age || !height || !weight || !goal || !gender) {
-      alert("Please fill all fields");
+      Alert.alert("Error", "Please fill all fields.");
       return;
     }
 
+    setLoading(true);
     try {
-      await api.post("/auth/register", {
-        name: name.trim(),
-        email,
-        password,
-        age: parseInt(age),
-        height: parseInt(height),
-        weight: parseInt(weight),
-        gender,
-        goal,
-        activityLevel: "moderate",
-      });
-      await AsyncStorage.setItem(
-        "userProfile",
-        JSON.stringify({
+      if (isGoogleUser) {
+        // ── Google User Registration ──
+        const res = await api.post("/auth/google-register", {
           name: name.trim(),
-          age,
-          height,
-          weight,
+          email,
+          googleId,
+          age: parseInt(age),
+          height: parseInt(height),
+          weight: parseInt(weight),
           gender,
           goal,
-        })
-      );
-      alert("User Registered Successfully ✅");
-      navigation.replace("Login");
+          activityLevel: "moderate",
+        });
+
+        await AsyncStorage.setItem("token", res.data.token);
+        await AsyncStorage.setItem(
+          "userProfile",
+          JSON.stringify({ name: name.trim(), age, height, weight, gender, goal })
+        );
+
+        // Google users are pre-verified — go straight to app
+        navigation.replace("Main");
+
+      } else {
+        // ── Email/Password Registration ──
+        await api.post("/auth/register", {
+          name: name.trim(),
+          email,
+          password,
+          age: parseInt(age),
+          height: parseInt(height),
+          weight: parseInt(weight),
+          gender,
+          goal,
+          activityLevel: "moderate",
+        });
+
+        await AsyncStorage.setItem(
+          "userProfile",
+          JSON.stringify({ name: name.trim(), age, height, weight, gender, goal })
+        );
+
+        // Navigate to OTP verification
+        Alert.alert(
+          "Verify Your Email",
+          `A 6-digit OTP has been sent to ${email}. Please verify to complete registration.`,
+          [
+            {
+              text: "OK",
+              onPress: () => navigation.navigate("OTPVerification", { email }),
+            },
+          ]
+        );
+      }
 
     } catch (error) {
-      console.log(error.response?.data || error.message);
+      const errMsg = error.response?.data?.message || error.message;
+      console.log("Signup error:", errMsg);
+      Alert.alert("Signup Failed", errMsg);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -65,6 +103,12 @@ export default function ProfileSetupScreen({ navigation, route }) {
     >
       <View style={styles.glassCard}>
         <Text style={styles.title}>Tell us about yourself</Text>
+
+        {isGoogleUser && (
+          <View style={styles.googleBadge}>
+            <Text style={styles.googleBadgeText}>🔵 Signing up with Google</Text>
+          </View>
+        )}
 
         <ScrollView showsVerticalScrollIndicator={false}>
 
@@ -107,20 +151,14 @@ export default function ProfileSetupScreen({ navigation, route }) {
           <Text style={styles.sectionLabel}>Gender</Text>
           <View style={styles.row}>
             <TouchableOpacity
-              style={[
-                styles.optionButton,
-                gender === "male" && styles.selectedOption
-              ]}
+              style={[styles.optionButton, gender === "male" && styles.selectedOption]}
               onPress={() => setGender("male")}
             >
               <Text style={styles.optionText}>Male</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[
-                styles.optionButton,
-                gender === "female" && styles.selectedOption
-              ]}
+              style={[styles.optionButton, gender === "female" && styles.selectedOption]}
               onPress={() => setGender("female")}
             >
               <Text style={styles.optionText}>Female</Text>
@@ -128,43 +166,41 @@ export default function ProfileSetupScreen({ navigation, route }) {
           </View>
 
           {/* Goal Selection */}
-<Text style={styles.sectionLabel}>Goal</Text>
-<View style={styles.goalContainer}>
+          <Text style={styles.sectionLabel}>Goal</Text>
+          <View style={styles.goalContainer}>
 
-  <TouchableOpacity
-    style={[
-      styles.goalButton,
-      goal === "muscle_build" && styles.selectedOption
-    ]}
-    onPress={() => setGoal("muscle_build")}
-  >
-    <Text style={styles.optionText}>Muscle Build</Text>
-  </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.goalButton, goal === "muscle_build" && styles.selectedOption]}
+              onPress={() => setGoal("muscle_build")}
+            >
+              <Text style={styles.optionText}>Muscle Build</Text>
+            </TouchableOpacity>
 
-  <TouchableOpacity
-    style={[
-      styles.goalButton,
-      goal === "weight_loss" && styles.selectedOption
-    ]}
-    onPress={() => setGoal("weight_loss")}
-  >
-    <Text style={styles.optionText}>Weight Loss</Text>
-  </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.goalButton, goal === "weight_loss" && styles.selectedOption]}
+              onPress={() => setGoal("weight_loss")}
+            >
+              <Text style={styles.optionText}>Weight Loss</Text>
+            </TouchableOpacity>
 
-  <TouchableOpacity
-    style={[
-      styles.goalButton,
-      goal === "maintenance" && styles.selectedOption
-    ]}
-    onPress={() => setGoal("maintenance")}
-  >
-    <Text style={styles.optionText}>Maintain Weight</Text>
-  </TouchableOpacity>
+            <TouchableOpacity
+              style={[styles.goalButton, goal === "maintenance" && styles.selectedOption]}
+              onPress={() => setGoal("maintenance")}
+            >
+              <Text style={styles.optionText}>Maintain Weight</Text>
+            </TouchableOpacity>
 
-</View>
+          </View>
 
-          <TouchableOpacity style={styles.button} onPress={handleContinue}>
-            <Text style={styles.buttonText}>Continue</Text>
+          <TouchableOpacity
+            style={[styles.button, loading && { opacity: 0.6 }]}
+            onPress={handleContinue}
+            disabled={loading}
+          >
+            {loading
+              ? <ActivityIndicator color="#020617" />
+              : <Text style={styles.buttonText}>Continue</Text>
+            }
           </TouchableOpacity>
 
         </ScrollView>
@@ -179,7 +215,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   glassCard: {
     width: "90%",
     padding: 30,
@@ -189,7 +224,6 @@ const styles = StyleSheet.create({
     borderColor: "rgba(255,255,255,0.25)",
     elevation: 15,
   },
-
   title: {
     fontSize: 24,
     fontWeight: "700",
@@ -197,7 +231,17 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
-
+  googleBadge: {
+    backgroundColor: "rgba(255,255,255,0.15)",
+    borderRadius: 10,
+    padding: 8,
+    marginBottom: 16,
+    alignItems: "center",
+  },
+  googleBadgeText: {
+    color: "#93c5fd",
+    fontWeight: "600",
+  },
   input: {
     backgroundColor: "rgba(255,255,255,0.15)",
     padding: 14,
@@ -205,20 +249,17 @@ const styles = StyleSheet.create({
     marginBottom: 12,
     color: "white",
   },
-
   sectionLabel: {
     color: "#cbd5f5",
     marginTop: 10,
     marginBottom: 8,
     fontWeight: "600",
   },
-
   row: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 15,
   },
-
   optionButton: {
     flex: 1,
     padding: 12,
@@ -227,38 +268,32 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     alignItems: "center",
   },
-
   selectedOption: {
     backgroundColor: "#38bdf8",
   },
-
   optionText: {
     color: "white",
     fontWeight: "600",
   },
-
   button: {
     backgroundColor: "#38bdf8",
     padding: 16,
     borderRadius: 14,
     marginTop: 10,
   },
-
   buttonText: {
     textAlign: "center",
     fontWeight: "700",
     color: "#020617",
   },
-
   goalContainer: {
-  marginBottom: 15,
-},
-
-goalButton: {
-  padding: 12,
-  borderRadius: 12,
-  backgroundColor: "rgba(255,255,255,0.15)",
-  marginBottom: 10,
-  alignItems: "center",
-},
+    marginBottom: 15,
+  },
+  goalButton: {
+    padding: 12,
+    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.15)",
+    marginBottom: 10,
+    alignItems: "center",
+  },
 });

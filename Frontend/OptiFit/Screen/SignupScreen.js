@@ -5,31 +5,56 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  Alert,
+  ActivityIndicator,
 } from "react-native";
-
 import { LinearGradient } from "expo-linear-gradient";
+
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+
+const isStrongPassword = (password) => {
+  return password.length >= 8 && /[a-zA-Z]/.test(password) && /[0-9]/.test(password);
+};
 
 export default function SignupScreen({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSignup = () => {
-  if (!email || !password || !confirm) {
-    alert("Fill all fields");
-    return;
-  }
+    if (!email || !password || !confirm) {
+      Alert.alert("Error", "Please fill all fields.");
+      return;
+    }
 
-  if (password !== confirm) {
-    alert("Passwords do not match");
-    return;
-  }
+    if (!isValidEmail(email)) {
+      Alert.alert("Invalid Email", "Please enter a valid email address (e.g. name@gmail.com).");
+      return;
+    }
 
-  navigation.navigate("ProfileSetup", {
-    email,
-    password,
-  });
-};
+    if (!isStrongPassword(password)) {
+      Alert.alert(
+        "Weak Password",
+        "Password must be at least 8 characters and include letters and numbers."
+      );
+      return;
+    }
+
+    if (password !== confirm) {
+      Alert.alert("Error", "Passwords do not match.");
+      return;
+    }
+
+    // Navigate to profile setup — actual registration happens after profile is filled
+    navigation.navigate("ProfileSetup", {
+      email,
+      password,
+    });
+  };
 
   return (
     <LinearGradient
@@ -45,10 +70,13 @@ export default function SignupScreen({ navigation }) {
           style={styles.input}
           value={email}
           onChangeText={setEmail}
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={false}
         />
 
         <TextInput
-          placeholder="Password"
+          placeholder="Password (min 8 chars, letters + numbers)"
           placeholderTextColor="#cbd5f5"
           secureTextEntry
           style={styles.input}
@@ -65,8 +93,15 @@ export default function SignupScreen({ navigation }) {
           onChangeText={setConfirm}
         />
 
-        <TouchableOpacity style={styles.button} onPress={handleSignup}>
-          <Text style={styles.buttonText}>Sign Up</Text>
+        <TouchableOpacity
+          style={[styles.button, loading && { opacity: 0.6 }]}
+          onPress={handleSignup}
+          disabled={loading}
+        >
+          {loading
+            ? <ActivityIndicator color="#020617" />
+            : <Text style={styles.buttonText}>Continue</Text>
+          }
         </TouchableOpacity>
 
         <TouchableOpacity onPress={() => navigation.navigate("Login")}>
@@ -83,27 +118,20 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-
   glassCard: {
     width: "90%",
     padding: 30,
     borderRadius: 30,
-
     backgroundColor: "rgba(147,197,253,0.25)",
-
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.25)",
-
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.25,
     shadowRadius: 20,
-
     elevation: 15,
-
     overflow: "hidden",
   },
-
   title: {
     fontSize: 26,
     fontWeight: "700",
@@ -111,7 +139,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 20,
   },
-
   input: {
     backgroundColor: "rgba(255,255,255,0.15)",
     padding: 14,
@@ -119,19 +146,16 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     color: "white",
   },
-
   button: {
     backgroundColor: "#38bdf8",
     padding: 15,
     borderRadius: 14,
   },
-
   buttonText: {
     textAlign: "center",
     fontWeight: "700",
     color: "#020617",
   },
-
   link: {
     textAlign: "center",
     marginTop: 18,

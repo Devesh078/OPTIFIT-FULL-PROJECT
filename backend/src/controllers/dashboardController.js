@@ -86,11 +86,39 @@ const getDashboard = async (req, res) => {
     // ✅ Fix 3: pass full user object (waterCalculator needs weight, activityLevel, age)
     const waterGoal = calculateWaterGoal(user);
 
-    // RECOVERY
-    const recovery = await Recovery.findOne({
-      userId,
-      date: { $gte: today, $lte: endOfToday },
-    });
+    // ✅ Auto-calculate recovery if not exists today
+let recovery = await Recovery.findOne({
+  userId,
+  date: { $gte: today, $lte: endOfToday },
+});
+
+if (!recovery) {
+  const { calculateSleepDebt } = require("../services/sleepService");
+  const { calculateRecoveryScore } = require("../services/recoveryService");
+  const { calculateProteinTarget } = require("../services/calorieService");
+
+  const sleepDebt = await calculateSleepDebt(userId);
+  const proteinTarget = calculateProteinTarget(user, sleepHours);
+  const proteinPercent = proteinTarget > 0
+    ? (consumedProtein / proteinTarget) * 100
+    : 0;
+  const stepPercent = (steps / DEFAULT_STEP_GOAL) * 100;
+
+  const score = calculateRecoveryScore(
+    sleepHours,
+    sleepDebt,
+    proteinPercent,
+    stepPercent
+  );
+
+  recovery = await Recovery.create({
+    userId,
+    date: today,
+    score,
+    sleepHours,
+    sleepDebt,
+  });
+}
 
     // PROTEIN QUALITY
     const proteinQuality = await ProteinQuality.findOne({

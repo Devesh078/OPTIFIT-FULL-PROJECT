@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1011318860548",
+    "project_id": "optifit-492113",
+    "storage_bucket": "optifit-492113.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011318860548:android:30fec65681daccf9467e51",
+        "android_client_info": {
+          "package_name": "com.anonymous.optifitapp.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF4YPeyjxX4pGBmSaid94akE_uTRqx_fg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,18 +32,23 @@ export default function DashboardScreen({ navigation, setIsLoggedIn }) {
 
   // Check today's sleep status from API (File 1), fallback to AsyncStorage (File 2)
   const checkSleepStatus = async () => {
-    try {
-      const res = await api.get("/sleep/today");
-      if (!res.data) {
-        setSleepLogged(false);
+  try {
+    const res = await api.get("/sleep/today");
+    if (!res.data) {
+      setSleepLogged(false);
+
+      // Prompt from 5am to 2pm (covers early risers and late sleepers)
+      const hour = new Date().getHours();
+      if (hour >= 5 && hour < 14) {
         setSleepModalVisible(true);
-      } else {
-        setSleepLogged(true);
       }
-    } catch (error) {
-      console.log("Sleep status check:", error.response?.data || error.message);
+    } else {
+      setSleepLogged(true);
     }
-  };
+  } catch (error) {
+    console.log("Sleep status check:", error.response?.data || error.message);
+  }
+};
 
   const loadDashboard = async () => {
     try {
@@ -323,47 +328,85 @@ export default function DashboardScreen({ navigation, setIsLoggedIn }) {
               <Text style={styles.meta}>
                 {calorieConsumed} consumed • Goal {calorieTarget}
               </Text>
-            {data?.workout?.caloriesBurned > 0 && (
+           {data?.workout?.caloriesBurned > 0 && (
   <View style={styles.workoutBox}>
+    <Ionicons name="fitness-outline" size={16} color="#f97316" style={{ marginRight: 6 }} />
     <Text style={styles.workoutText}>
-      🔥 Burned {data.workout.caloriesBurned} kcal from workout
+      Burned {data.workout.caloriesBurned} kcal from workout
     </Text>
   </View>
 )}
 </View>
+{/* PROTEIN RING */}
+<View style={styles.hero}>
+  <AnimatedCircularProgress
+    size={160}
+    width={10}
+    fill={proteinFill}
+    tintColor={proteinConsumed > proteinTarget ? "#ef4444" : "#38bdf8"}
+    backgroundColor="#1E293B"
+    lineCap="round"
+  >
+    {() => (
+      <>
+        <Text style={[styles.remainingSmall, { color: proteinConsumed > proteinTarget ? "#ef4444" : "#fff" }]}>
+          {proteinConsumed}/{proteinTarget}
+        </Text>
+        <Text style={styles.subText}>Protein (g)</Text>
+      </>
+    )}
+  </AnimatedCircularProgress>
 
-            {/* PROTEIN RING */}
-            <View style={styles.hero}>
-              <AnimatedCircularProgress
-                size={160}
-                width={10}
-                fill={proteinFill}
-                tintColor="#38bdf8"
-                backgroundColor="#1E293B"
-                lineCap="round"
-              >
-                {() => (
-                  <>
-                    <Text style={styles.remainingSmall}>
-                      {proteinConsumed}/{proteinTarget}
-                    </Text>
-                    <Text style={styles.subText}>Protein (g)</Text>
-                  </>
-                )}
-              </AnimatedCircularProgress>
-            </View>
+  {/* ✅ Protein status message */}
+  {proteinConsumed >= proteinTarget && proteinTarget > 0 ? (
+    <View style={{
+      marginTop: 10,
+      backgroundColor: proteinConsumed > proteinTarget ? "#450a0a" : "#052e16",
+      paddingVertical: 8,
+      paddingHorizontal: 16,
+      borderRadius: 12,
+      borderWidth: 1,
+      borderColor: proteinConsumed > proteinTarget ? "#ef4444" : "#00E676",
+    }}>
+      <Text style={{
+        color: proteinConsumed > proteinTarget ? "#ef4444" : "#00E676",
+        fontWeight: "700",
+        fontSize: 13,
+      }}>
+        {proteinConsumed > proteinTarget
+          ? `⚠ Protein exceeded by ${proteinConsumed - proteinTarget}g`
+          : "✅ Protein goal achieved!"}
+      </Text>
+    </View>
+  ) : null}
+</View>
 
             {/* QUICK ACTIONS */}
             <Text style={styles.overviewTitle}>Quick Actions</Text>
 
             <View style={styles.quickActions}>
               <TouchableOpacity
-                style={styles.quickBtn}
-                onPress={() => navigation.navigate("FoodScanner")}
-              >
-                <Ionicons name="restaurant" size={22} color="#fff" />
-                <Text style={styles.quickText}>Log Food</Text>
-              </TouchableOpacity>
+  style={[
+  styles.quickBtn,
+  styles.coachBtn
+]}
+  onPress={() => navigation.navigate("Coach")}
+>
+  <Ionicons
+  name="flash-outline"
+  size={22}
+  color="#38BDF8"
+/>
+
+  <Text
+    style={[
+      styles.quickText,
+      { color: "#38BDF8" }
+    ]}
+  >
+   Coach
+  </Text>
+</TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.quickBtn}
@@ -672,18 +715,28 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#0F172A",
   },
-  workoutBox: {
+workoutBox: {
   marginTop: 10,
   backgroundColor: "#1E293B",
   paddingVertical: 10,
   paddingHorizontal: 16,
   borderRadius: 14,
-  alignSelf: "center",
+  alignSelf: "stretch",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  marginHorizontal: 10,
 },
-
 workoutText: {
   color: "#f97316",
   fontSize: 13,
   fontWeight: "500",
 },
+
+coachBtn: {
+  backgroundColor: "#111827",
+  borderWidth: 1,
+  borderColor: "#1E293B",
+},
+
 });

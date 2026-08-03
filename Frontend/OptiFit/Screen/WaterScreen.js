@@ -10,12 +10,7 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 import { AnimatedCircularProgress } from "react-native-circular-progress";
 import api from "../services/api";
-import {
-  registerForNotifications,
-  scheduleWaterReminder,
-  setupNotificationListener,
-} from "../utils/notifications";
-
+import { scheduleWaterReminder } from "../utils/notifications";
 export default function WaterScreen() {
   const [currentWater, setCurrentWater] = useState(0);
   const [goal, setGoal] = useState(0);
@@ -53,26 +48,6 @@ export default function WaterScreen() {
     loadWaterData();
   }, []);
 
-  // ─────────────────────────────────────────
-  // NOTIFICATIONS SETUP
-  // ─────────────────────────────────────────
-  useEffect(() => {
-    registerForNotifications();
-
-    const sub = setupNotificationListener(
-      // onWaterAdded — updates water state when Done is tapped
-      ({ totalWater, logs }) => {
-        setCurrentWater(totalWater);
-        setHistory(logs);
-        setLastAdded(100);
-        runAnimations();
-      },
-      // getReminderMinutes — returns current reminder interval for rescheduling
-      () => reminderMinutesRef.current
-    );
-
-    return () => sub?.remove();
-  }, []);
 
   // ─────────────────────────────────────────
   // ANIMATIONS

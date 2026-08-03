@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { LineChart } from "react-native-chart-kit";
+import { Dimensions } from "react-native";
 import {
 View,
 Text,
@@ -23,7 +25,8 @@ const [weight,setWeight] = useState("");
 const [height,setHeight] = useState("");
 const [goal,setGoal] = useState("");
 const [gender,setGender] = useState("");
-const streak = 5; // temporary
+const [streak, setStreak] = useState(0);
+const [weeklyCalories, setWeeklyCalories] = useState([0,0,0,0,0,0,0]);
 
 useEffect(()=>{
 loadProfile();
@@ -47,7 +50,21 @@ setGender(res.data.gender);
 console.log(err);
 
 }
+// ✅ Load streak
+try {
+  const streakRes = await api.get("/workout/streak");
+  setStreak(streakRes.data.streak);
+} catch (e) {
+  console.log("Streak error:", e);
+}
 
+// ✅ Load weekly calories
+try {
+  const calRes = await api.get("/workout/weekly-calories");
+  setWeeklyCalories(calRes.data.weeklyCalories);
+} catch (e) {
+  console.log("Weekly calories error:", e);
+}
 };
 
 const calculateBMI = () => {
@@ -163,13 +180,27 @@ onPress={() => setEditVisible(true)}
 
 <Text style={styles.sectionTitle}>Weekly Calories Burned</Text>
 
-<View style={styles.fakeChart}>
-
-<Text style={{color:"#94A3B8"}}>
-Chart Placeholder
-</Text>
-
-</View>
+<LineChart
+  data={{
+    labels: ["M", "T", "W", "T", "F", "S", "S"],
+    datasets: [{ data: weeklyCalories.length === 7 ? weeklyCalories : [0,0,0,0,0,0,0] }],
+  }}
+  width={Dimensions.get("window").width - 80}
+  height={120}
+  withDots={true}
+  withInnerLines={false}
+  withOuterLines={false}
+  fromZero={true}
+  bezier
+  chartConfig={{
+    backgroundGradientFrom: "#0F172A",
+    backgroundGradientTo: "#0F172A",
+    decimalPlaces: 0,
+    color: (opacity = 1) => `rgba(0, 230, 118, ${opacity})`,
+    labelColor: (opacity = 1) => `rgba(148, 163, 184, ${opacity})`,
+  }}
+  style={{ borderRadius: 12 }}
+/>
 
 </View>
 

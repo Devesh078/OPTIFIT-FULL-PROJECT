@@ -1,76 +1,2378 @@
 {
-  "roti": { "calories": 120, "protein": 3, "carbs": 22, "fats": 1 },
-  "chapati": { "calories": 120, "protein": 3, "carbs": 22, "fats": 1 },
-  "tandoori roti": { "calories": 150, "protein": 4, "carbs": 28, "fats": 2 },
-  "butter roti": { "calories": 180, "protein": 4, "carbs": 25, "fats": 6 },
-
-  "ghee": { "calories": 45, "protein": 0, "carbs": 0, "fats": 5 },
-  "butter": { "calories": 102, "protein": 0, "carbs": 0, "fats": 12 },
-  "oil": { "calories": 120, "protein": 0, "carbs": 0, "fats": 14 },
-
-  "rice": { "calories": 200, "protein": 4, "carbs": 45, "fats": 1 },
-  "brown rice": { "calories": 216, "protein": 5, "carbs": 45, "fats": 2 },
-  "jeera rice": { "calories": 250, "protein": 5, "carbs": 48, "fats": 6 },
-  "fried rice": { "calories": 300, "protein": 6, "carbs": 50, "fats": 10 },
-
-  "dal": { "calories": 150, "protein": 9, "carbs": 27, "fats": 1 },
-  "dal tadka": { "calories": 220, "protein": 10, "carbs": 28, "fats": 8 },
-  "rajma": { "calories": 240, "protein": 12, "carbs": 40, "fats": 5 },
-  "chole": { "calories": 260, "protein": 11, "carbs": 42, "fats": 7 },
-
-  "paneer": { "calories": 265, "protein": 18, "carbs": 2, "fats": 20 },
-  "paneer butter masala": { "calories": 350, "protein": 15, "carbs": 10, "fats": 28 },
-  "palak paneer": { "calories": 280, "protein": 14, "carbs": 8, "fats": 22 },
-
-  "egg": { "calories": 78, "protein": 6, "carbs": 1, "fats": 5 },
-  "boiled egg": { "calories": 78, "protein": 6, "carbs": 1, "fats": 5 },
-  "fried egg": { "calories": 90, "protein": 6, "carbs": 1, "fats": 7 },
-  "omelette": { "calories": 120, "protein": 8, "carbs": 2, "fats": 9 },
-
-  "chicken breast": { "calories": 165, "protein": 31, "carbs": 0, "fats": 4 },
-  "chicken curry": { "calories": 250, "protein": 20, "carbs": 6, "fats": 18 },
-  "chicken biryani": { "calories": 400, "protein": 25, "carbs": 45, "fats": 15 },
-  "grilled chicken": { "calories": 220, "protein": 35, "carbs": 0, "fats": 8 },
-
-  "milk": { "calories": 103, "protein": 8, "carbs": 12, "fats": 2 },
-  "curd": { "calories": 98, "protein": 11, "carbs": 3, "fats": 4 },
-  "buttermilk": { "calories": 60, "protein": 3, "carbs": 5, "fats": 2 },
-
-  "banana": { "calories": 105, "protein": 1, "carbs": 27, "fats": 0 },
-  "apple": { "calories": 95, "protein": 0, "carbs": 25, "fats": 0 },
-  "orange": { "calories": 62, "protein": 1, "carbs": 15, "fats": 0 },
-  "mango": { "calories": 150, "protein": 2, "carbs": 35, "fats": 1 },
-
-  "oats": { "calories": 150, "protein": 5, "carbs": 27, "fats": 3 },
-  "oats upma": { "calories": 180, "protein": 6, "carbs": 30, "fats": 4 },
-
-  "peanut butter": { "calories": 188, "protein": 8, "carbs": 6, "fats": 16 },
-
-  "bread": { "calories": 79, "protein": 3, "carbs": 15, "fats": 1 },
-  "brown bread": { "calories": 70, "protein": 3, "carbs": 12, "fats": 1 },
-
-  "idli": { "calories": 58, "protein": 2, "carbs": 12, "fats": 0 },
-  "dosa": { "calories": 168, "protein": 4, "carbs": 27, "fats": 3 },
-  "masala dosa": { "calories": 250, "protein": 6, "carbs": 35, "fats": 8 },
-  "sambar": { "calories": 80, "protein": 4, "carbs": 12, "fats": 2 },
-
-  "upma": { "calories": 192, "protein": 5, "carbs": 32, "fats": 5 },
-  "poha": { "calories": 180, "protein": 4, "carbs": 38, "fats": 2 },
-
-  "burger": { "calories": 295, "protein": 17, "carbs": 30, "fats": 12 },
-  "pizza": { "calories": 285, "protein": 12, "carbs": 36, "fats": 10 },
-  "fries": { "calories": 365, "protein": 4, "carbs": 63, "fats": 17 },
-
-  "protein shake": { "calories": 220, "protein": 25, "carbs": 10, "fats": 5 },
-  "whey protein": { "calories": 120, "protein": 24, "carbs": 3, "fats": 1 },
-
-  "almonds": { "calories": 164, "protein": 6, "carbs": 6, "fats": 14 },
-  "cashews": { "calories": 157, "protein": 5, "carbs": 9, "fats": 12 },
-  "walnuts": { "calories": 185, "protein": 4, "carbs": 4, "fats": 18 },
-
-  "salad": { "calories": 80, "protein": 2, "carbs": 10, "fats": 3 },
-  "fruit salad": { "calories": 120, "protein": 2, "carbs": 30, "fats": 1 },
-
-  "tea": { "calories": 40, "protein": 1, "carbs": 5, "fats": 2 },
-  "coffee": { "calories": 30, "protein": 1, "carbs": 4, "fats": 1 }
+  "roti": {
+    "calories": 120,
+    "protein": 3,
+    "carbs": 22,
+    "fats": 1
+  },
+  "chapati": {
+    "calories": 120,
+    "protein": 3,
+    "carbs": 22,
+    "fats": 1
+  },
+  "tandoori roti": {
+    "calories": 150,
+    "protein": 4,
+    "carbs": 28,
+    "fats": 2
+  },
+  "butter roti": {
+    "calories": 180,
+    "protein": 4,
+    "carbs": 25,
+    "fats": 6
+  },
+  "plain paratha": {
+    "calories": 250,
+    "protein": 6,
+    "carbs": 30,
+    "fats": 12
+  },
+  "methi paratha": {
+    "calories": 230,
+    "protein": 6,
+    "carbs": 28,
+    "fats": 10
+  },
+  "lachha paratha": {
+    "calories": 300,
+    "protein": 6,
+    "carbs": 32,
+    "fats": 16
+  },
+  "butter naan": {
+    "calories": 260,
+    "protein": 6,
+    "carbs": 35,
+    "fats": 10
+  },
+  "garlic naan": {
+    "calories": 280,
+    "protein": 7,
+    "carbs": 36,
+    "fats": 12
+  },
+  "bhature": {
+    "calories": 300,
+    "protein": 6,
+    "carbs": 40,
+    "fats": 12
+  },
+  "puri": {
+    "calories": 160,
+    "protein": 3,
+    "carbs": 20,
+    "fats": 8
+  },
+  "ghee": {
+    "calories": 902,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 100
+  },
+  "butter": {
+    "calories": 717,
+    "protein": 0.9,
+    "carbs": 0.1,
+    "fats": 81
+  },
+  "oil": {
+    "calories": 884,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 100
+  },
+  "rice": {
+    "calories": 130,
+    "protein": 2.7,
+    "carbs": 28,
+    "fats": 0.3
+  },
+  "white rice": {
+    "calories": 130,
+    "protein": 2.7,
+    "carbs": 28,
+    "fats": 0.3
+  },
+  "basmati rice": {
+    "calories": 130,
+    "protein": 2.7,
+    "carbs": 28,
+    "fats": 0.3
+  },
+  "brown rice": {
+    "calories": 122,
+    "protein": 2.6,
+    "carbs": 26,
+    "fats": 0.9
+  },
+  "jeera rice": {
+    "calories": 150,
+    "protein": 3,
+    "carbs": 30,
+    "fats": 3
+  },
+  "fried rice": {
+    "calories": 180,
+    "protein": 4,
+    "carbs": 30,
+    "fats": 6
+  },
+  "curd rice": {
+    "calories": 120,
+    "protein": 4,
+    "carbs": 20,
+    "fats": 3
+  },
+  "lemon rice": {
+    "calories": 140,
+    "protein": 3,
+    "carbs": 28,
+    "fats": 3
+  },
+  "tamarind rice": {
+    "calories": 145,
+    "protein": 3,
+    "carbs": 29,
+    "fats": 3.5
+  },
+  "veg pulao": {
+    "calories": 140,
+    "protein": 3,
+    "carbs": 27,
+    "fats": 3
+  },
+  "peas pulao": {
+    "calories": 145,
+    "protein": 4,
+    "carbs": 28,
+    "fats": 3
+  },
+  "veg biryani": {
+    "calories": 160,
+    "protein": 4,
+    "carbs": 30,
+    "fats": 4
+  },
+  "chicken biryani": {
+    "calories": 180,
+    "protein": 12,
+    "carbs": 25,
+    "fats": 5
+  },
+  "egg biryani": {
+    "calories": 170,
+    "protein": 9,
+    "carbs": 25,
+    "fats": 5
+  },
+  "mutton biryani": {
+    "calories": 200,
+    "protein": 14,
+    "carbs": 24,
+    "fats": 7
+  },
+  "schezwan fried rice": {
+    "calories": 170,
+    "protein": 4,
+    "carbs": 30,
+    "fats": 5
+  },
+  "chicken fried rice": {
+    "calories": 175,
+    "protein": 9,
+    "carbs": 25,
+    "fats": 5
+  },
+  "egg fried rice": {
+    "calories": 160,
+    "protein": 7,
+    "carbs": 25,
+    "fats": 5
+  },
+  "paneer fried rice": {
+    "calories": 165,
+    "protein": 7,
+    "carbs": 25,
+    "fats": 5
+  },
+  "dal": {
+    "calories": 116,
+    "protein": 9,
+    "carbs": 20,
+    "fats": 0.4
+  },
+  "dal tadka": {
+    "calories": 130,
+    "protein": 8,
+    "carbs": 18,
+    "fats": 4
+  },
+  "dal fry": {
+    "calories": 125,
+    "protein": 7,
+    "carbs": 17,
+    "fats": 4
+  },
+  "makhani dal": {
+    "calories": 150,
+    "protein": 7,
+    "carbs": 16,
+    "fats": 7
+  },
+  "masoor dal": {
+    "calories": 116,
+    "protein": 9,
+    "carbs": 20,
+    "fats": 0.4
+  },
+  "moong dal": {
+    "calories": 105,
+    "protein": 8,
+    "carbs": 18,
+    "fats": 0.4
+  },
+  "urad dal": {
+    "calories": 127,
+    "protein": 9,
+    "carbs": 22,
+    "fats": 0.6
+  },
+  "rajma": {
+    "calories": 127,
+    "protein": 9,
+    "carbs": 22,
+    "fats": 0.5
+  },
+  "chole": {
+    "calories": 164,
+    "protein": 9,
+    "carbs": 27,
+    "fats": 2.6
+  },
+  "rajma chawal": {
+    "calories": 140,
+    "protein": 6,
+    "carbs": 25,
+    "fats": 2
+  },
+  "chole bhature": {
+    "calories": 220,
+    "protein": 7,
+    "carbs": 30,
+    "fats": 9
+  },
+  "paneer": {
+    "calories": 265,
+    "protein": 18,
+    "carbs": 2,
+    "fats": 20
+  },
+  "low fat paneer": {
+    "calories": 180,
+    "protein": 20,
+    "carbs": 3,
+    "fats": 8
+  },
+  "paneer cubes": {
+    "calories": 265,
+    "protein": 18,
+    "carbs": 2,
+    "fats": 20
+  },
+  "paneer butter masala": {
+    "calories": 175,
+    "protein": 8,
+    "carbs": 6,
+    "fats": 14
+  },
+  "palak paneer": {
+    "calories": 160,
+    "protein": 8,
+    "carbs": 5,
+    "fats": 12
+  },
+  "paneer tikka masala": {
+    "calories": 180,
+    "protein": 9,
+    "carbs": 7,
+    "fats": 14
+  },
+  "shahi paneer": {
+    "calories": 195,
+    "protein": 8,
+    "carbs": 6,
+    "fats": 16
+  },
+  "kadai paneer": {
+    "calories": 170,
+    "protein": 8,
+    "carbs": 7,
+    "fats": 13
+  },
+  "paneer bhurji": {
+    "calories": 165,
+    "protein": 10,
+    "carbs": 5,
+    "fats": 13
+  },
+  "paneer tikka": {
+    "calories": 230,
+    "protein": 16,
+    "carbs": 5,
+    "fats": 16
+  },
+  "chilli paneer": {
+    "calories": 200,
+    "protein": 10,
+    "carbs": 12,
+    "fats": 14
+  },
+  "fried paneer": {
+    "calories": 280,
+    "protein": 14,
+    "carbs": 5,
+    "fats": 22
+  },
+  "paneer salad": {
+    "calories": 140,
+    "protein": 10,
+    "carbs": 6,
+    "fats": 9
+  },
+  "egg": {
+    "calories": 155,
+    "protein": 13,
+    "carbs": 1.1,
+    "fats": 11
+  },
+  "boiled egg": {
+    "calories": 155,
+    "protein": 13,
+    "carbs": 1.1,
+    "fats": 11
+  },
+  "fried egg": {
+    "calories": 196,
+    "protein": 13,
+    "carbs": 1,
+    "fats": 15
+  },
+  "omelette": {
+    "calories": 175,
+    "protein": 11,
+    "carbs": 2,
+    "fats": 14
+  },
+  "masala omelette": {
+    "calories": 180,
+    "protein": 11,
+    "carbs": 3,
+    "fats": 14
+  },
+  "cheese omelette": {
+    "calories": 200,
+    "protein": 13,
+    "carbs": 2,
+    "fats": 16
+  },
+  "double egg omelette": {
+    "calories": 195,
+    "protein": 14,
+    "carbs": 2,
+    "fats": 15
+  },
+  "egg bhurji": {
+    "calories": 195,
+    "protein": 12,
+    "carbs": 4,
+    "fats": 14
+  },
+  "egg white omelette": {
+    "calories": 55,
+    "protein": 11,
+    "carbs": 1,
+    "fats": 0.2
+  },
+  "boiled egg white": {
+    "calories": 52,
+    "protein": 11,
+    "carbs": 0.7,
+    "fats": 0.2
+  },
+  "egg yolk": {
+    "calories": 322,
+    "protein": 16,
+    "carbs": 3.6,
+    "fats": 27
+  },
+  "egg curry": {
+    "calories": 140,
+    "protein": 8,
+    "carbs": 5,
+    "fats": 10
+  },
+  "egg salad": {
+    "calories": 150,
+    "protein": 9,
+    "carbs": 4,
+    "fats": 11
+  },
+  "bread omelette": {
+    "calories": 195,
+    "protein": 9,
+    "carbs": 18,
+    "fats": 10
+  },
+  "chicken breast": {
+    "calories": 165,
+    "protein": 31,
+    "carbs": 0,
+    "fats": 4
+  },
+  "grilled chicken": {
+    "calories": 165,
+    "protein": 31,
+    "carbs": 0,
+    "fats": 4
+  },
+  "boiled chicken": {
+    "calories": 150,
+    "protein": 29,
+    "carbs": 0,
+    "fats": 3
+  },
+  "chicken curry": {
+    "calories": 150,
+    "protein": 14,
+    "carbs": 4,
+    "fats": 9
+  },
+  "butter chicken": {
+    "calories": 165,
+    "protein": 14,
+    "carbs": 5,
+    "fats": 11
+  },
+  "chicken tikka masala": {
+    "calories": 160,
+    "protein": 15,
+    "carbs": 5,
+    "fats": 10
+  },
+  "chicken tikka": {
+    "calories": 170,
+    "protein": 22,
+    "carbs": 3,
+    "fats": 8
+  },
+  "chicken keema": {
+    "calories": 175,
+    "protein": 18,
+    "carbs": 3,
+    "fats": 11
+  },
+  "chicken wings": {
+    "calories": 203,
+    "protein": 18,
+    "carbs": 0,
+    "fats": 14
+  },
+  "chicken lollipop": {
+    "calories": 200,
+    "protein": 14,
+    "carbs": 8,
+    "fats": 13
+  },
+  "chilli chicken": {
+    "calories": 195,
+    "protein": 16,
+    "carbs": 8,
+    "fats": 12
+  },
+  "chicken salad": {
+    "calories": 150,
+    "protein": 18,
+    "carbs": 5,
+    "fats": 7
+  },
+  "chicken soup": {
+    "calories": 35,
+    "protein": 4,
+    "carbs": 2,
+    "fats": 1.2
+  },
+  "mutton curry": {
+    "calories": 180,
+    "protein": 16,
+    "carbs": 3,
+    "fats": 12
+  },
+  "mutton keema": {
+    "calories": 185,
+    "protein": 18,
+    "carbs": 3,
+    "fats": 12
+  },
+  "prawn curry": {
+    "calories": 120,
+    "protein": 14,
+    "carbs": 4,
+    "fats": 6
+  },
+  "prawn fry": {
+    "calories": 140,
+    "protein": 16,
+    "carbs": 5,
+    "fats": 8
+  },
+  "fish fry": {
+    "calories": 175,
+    "protein": 18,
+    "carbs": 5,
+    "fats": 10
+  },
+  "grilled fish": {
+    "calories": 130,
+    "protein": 20,
+    "carbs": 0,
+    "fats": 5
+  },
+  "salmon": {
+    "calories": 208,
+    "protein": 20,
+    "carbs": 0,
+    "fats": 13
+  },
+  "tuna": {
+    "calories": 144,
+    "protein": 23,
+    "carbs": 0,
+    "fats": 5
+  },
+  "milk": {
+    "calories": 61,
+    "protein": 3.2,
+    "carbs": 4.8,
+    "fats": 3.3
+  },
+  "full cream milk": {
+    "calories": 61,
+    "protein": 3.2,
+    "carbs": 4.8,
+    "fats": 3.3
+  },
+  "skim milk": {
+    "calories": 34,
+    "protein": 3.4,
+    "carbs": 5.0,
+    "fats": 0.1
+  },
+  "protein milk": {
+    "calories": 70,
+    "protein": 6,
+    "carbs": 5,
+    "fats": 2.5
+  },
+  "almond milk": {
+    "calories": 15,
+    "protein": 0.6,
+    "carbs": 0.6,
+    "fats": 1.1
+  },
+  "soy milk": {
+    "calories": 33,
+    "protein": 2.9,
+    "carbs": 1.7,
+    "fats": 1.5
+  },
+  "oat milk": {
+    "calories": 45,
+    "protein": 1.0,
+    "carbs": 6.6,
+    "fats": 1.5
+  },
+  "badam milk": {
+    "calories": 75,
+    "protein": 3.5,
+    "carbs": 8.0,
+    "fats": 3.5
+  },
+  "rose milk": {
+    "calories": 70,
+    "protein": 3,
+    "carbs": 9,
+    "fats": 2.5
+  },
+  "curd": {
+    "calories": 60,
+    "protein": 3.5,
+    "carbs": 4.7,
+    "fats": 3.3
+  },
+  "greek yogurt": {
+    "calories": 59,
+    "protein": 10,
+    "carbs": 3.6,
+    "fats": 0.4
+  },
+  "fruit yogurt": {
+    "calories": 85,
+    "protein": 3.5,
+    "carbs": 14,
+    "fats": 1.5
+  },
+  "protein yogurt": {
+    "calories": 80,
+    "protein": 12,
+    "carbs": 5,
+    "fats": 1
+  },
+  "buttermilk": {
+    "calories": 40,
+    "protein": 3.3,
+    "carbs": 4.8,
+    "fats": 0.9
+  },
+  "lassi": {
+    "calories": 70,
+    "protein": 3.5,
+    "carbs": 8,
+    "fats": 2.5
+  },
+  "tea": {
+    "calories": 30,
+    "protein": 1,
+    "carbs": 3.5,
+    "fats": 1.5
+  },
+  "milk tea": {
+    "calories": 37,
+    "protein": 1.2,
+    "carbs": 4.5,
+    "fats": 1.5
+  },
+  "black tea": {
+    "calories": 2,
+    "protein": 0,
+    "carbs": 0.5,
+    "fats": 0
+  },
+  "green tea": {
+    "calories": 2,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0
+  },
+  "green tea lemon": {
+    "calories": 3,
+    "protein": 0,
+    "carbs": 0.5,
+    "fats": 0
+  },
+  "herbal tea": {
+    "calories": 2,
+    "protein": 0,
+    "carbs": 0.5,
+    "fats": 0
+  },
+  "coffee": {
+    "calories": 25,
+    "protein": 0.8,
+    "carbs": 3.5,
+    "fats": 1
+  },
+  "black coffee": {
+    "calories": 2,
+    "protein": 0.3,
+    "carbs": 0,
+    "fats": 0
+  },
+  "black coffee strong": {
+    "calories": 2,
+    "protein": 0.3,
+    "carbs": 0,
+    "fats": 0
+  },
+  "filter coffee": {
+    "calories": 40,
+    "protein": 1.5,
+    "carbs": 5,
+    "fats": 1.5
+  },
+  "cold coffee": {
+    "calories": 65,
+    "protein": 2,
+    "carbs": 9,
+    "fats": 2.5
+  },
+  "cold coffee with ice cream": {
+    "calories": 110,
+    "protein": 2.5,
+    "carbs": 15,
+    "fats": 5
+  },
+  "cold coffee strong": {
+    "calories": 50,
+    "protein": 1.5,
+    "carbs": 7,
+    "fats": 1.5
+  },
+  "coconut water": {
+    "calories": 19,
+    "protein": 0.7,
+    "carbs": 3.7,
+    "fats": 0.2
+  },
+  "sugarcane juice": {
+    "calories": 55,
+    "protein": 0.3,
+    "carbs": 13,
+    "fats": 0.2
+  },
+  "lemonade": {
+    "calories": 25,
+    "protein": 0.1,
+    "carbs": 6.5,
+    "fats": 0
+  },
+  "nimbu pani": {
+    "calories": 25,
+    "protein": 0.1,
+    "carbs": 6.5,
+    "fats": 0
+  },
+  "iced tea": {
+    "calories": 35,
+    "protein": 0,
+    "carbs": 9,
+    "fats": 0
+  },
+  "fruit juice": {
+    "calories": 45,
+    "protein": 0.5,
+    "carbs": 11,
+    "fats": 0.2
+  },
+  "orange juice": {
+    "calories": 45,
+    "protein": 0.7,
+    "carbs": 10,
+    "fats": 0.2
+  },
+  "watermelon juice": {
+    "calories": 30,
+    "protein": 0.6,
+    "carbs": 7.5,
+    "fats": 0.2
+  },
+  "pineapple juice": {
+    "calories": 50,
+    "protein": 0.4,
+    "carbs": 12,
+    "fats": 0.1
+  },
+  "sweet lime juice": {
+    "calories": 40,
+    "protein": 0.5,
+    "carbs": 9.5,
+    "fats": 0.1
+  },
+  "mixed fruit juice": {
+    "calories": 47,
+    "protein": 0.5,
+    "carbs": 11,
+    "fats": 0.2
+  },
+  "mango juice": {
+    "calories": 60,
+    "protein": 0.4,
+    "carbs": 14,
+    "fats": 0.2
+  },
+  "mojito": {
+    "calories": 40,
+    "protein": 0,
+    "carbs": 10,
+    "fats": 0
+  },
+  "fresh lime soda": {
+    "calories": 35,
+    "protein": 0,
+    "carbs": 9,
+    "fats": 0
+  },
+  "fresh lime water": {
+    "calories": 10,
+    "protein": 0,
+    "carbs": 2.5,
+    "fats": 0
+  },
+  "cold drink": {
+    "calories": 42,
+    "protein": 0,
+    "carbs": 11,
+    "fats": 0
+  },
+  "cola drink": {
+    "calories": 42,
+    "protein": 0,
+    "carbs": 11,
+    "fats": 0
+  },
+  "fanta": {
+    "calories": 48,
+    "protein": 0,
+    "carbs": 12,
+    "fats": 0
+  },
+  "mountain dew": {
+    "calories": 48,
+    "protein": 0,
+    "carbs": 13,
+    "fats": 0
+  },
+  "7up": {
+    "calories": 42,
+    "protein": 0,
+    "carbs": 11,
+    "fats": 0
+  },
+  "diet pepsi": {
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0
+  },
+  "zero coke": {
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0
+  },
+  "orange soda": {
+    "calories": 48,
+    "protein": 0,
+    "carbs": 12,
+    "fats": 0
+  },
+  "lemon soda": {
+    "calories": 35,
+    "protein": 0,
+    "carbs": 9,
+    "fats": 0
+  },
+  "energy drink sugar free": {
+    "calories": 2,
+    "protein": 0,
+    "carbs": 0,
+    "fats": 0
+  },
+  "banana shake": {
+    "calories": 90,
+    "protein": 3,
+    "carbs": 16,
+    "fats": 2.5
+  },
+  "mango shake": {
+    "calories": 90,
+    "protein": 2.5,
+    "carbs": 16,
+    "fats": 2.5
+  },
+  "strawberry shake": {
+    "calories": 85,
+    "protein": 2.5,
+    "carbs": 15,
+    "fats": 2.5
+  },
+  "banana milkshake": {
+    "calories": 90,
+    "protein": 3,
+    "carbs": 16,
+    "fats": 2.5
+  },
+  "oreo milkshake": {
+    "calories": 110,
+    "protein": 3,
+    "carbs": 17,
+    "fats": 4
+  },
+  "oreo shake": {
+    "calories": 110,
+    "protein": 3,
+    "carbs": 17,
+    "fats": 4
+  },
+  "kitkat shake": {
+    "calories": 115,
+    "protein": 3,
+    "carbs": 17,
+    "fats": 5
+  },
+  "kitkat milkshake": {
+    "calories": 115,
+    "protein": 3,
+    "carbs": 17,
+    "fats": 5
+  },
+  "dry fruit milkshake": {
+    "calories": 100,
+    "protein": 3.5,
+    "carbs": 13,
+    "fats": 4.5
+  },
+  "protein shake": {
+    "calories": 75,
+    "protein": 10,
+    "carbs": 5,
+    "fats": 1.5
+  },
+  "protein shake banana": {
+    "calories": 80,
+    "protein": 10,
+    "carbs": 7,
+    "fats": 1.5
+  },
+  "protein shake chocolate": {
+    "calories": 80,
+    "protein": 10,
+    "carbs": 7,
+    "fats": 1.5
+  },
+  "mass gainer shake": {
+    "calories": 125,
+    "protein": 8,
+    "carbs": 18,
+    "fats": 3
+  },
+  "oats smoothie": {
+    "calories": 75,
+    "protein": 3.5,
+    "carbs": 12,
+    "fats": 2
+  },
+  "fruit smoothie": {
+    "calories": 60,
+    "protein": 1.5,
+    "carbs": 13,
+    "fats": 0.5
+  },
+  "protein smoothie": {
+    "calories": 75,
+    "protein": 8,
+    "carbs": 9,
+    "fats": 1.5
+  },
+  "banana oats smoothie": {
+    "calories": 80,
+    "protein": 4,
+    "carbs": 14,
+    "fats": 2
+  },
+  "banana": {
+    "calories": 89,
+    "protein": 1.1,
+    "carbs": 23,
+    "fats": 0.3
+  },
+  "apple": {
+    "calories": 52,
+    "protein": 0.3,
+    "carbs": 14,
+    "fats": 0.2
+  },
+  "orange": {
+    "calories": 47,
+    "protein": 0.9,
+    "carbs": 12,
+    "fats": 0.1
+  },
+  "mango": {
+    "calories": 60,
+    "protein": 0.8,
+    "carbs": 15,
+    "fats": 0.4
+  },
+  "avocado": {
+    "calories": 160,
+    "protein": 2,
+    "carbs": 9,
+    "fats": 15
+  },
+  "dates": {
+    "calories": 282,
+    "protein": 2.5,
+    "carbs": 75,
+    "fats": 0.4
+  },
+  "raisins": {
+    "calories": 299,
+    "protein": 3.1,
+    "carbs": 79,
+    "fats": 0.5
+  },
+  "oats": {
+    "calories": 389,
+    "protein": 17,
+    "carbs": 66,
+    "fats": 7
+  },
+  "oats porridge": {
+    "calories": 68,
+    "protein": 2.4,
+    "carbs": 12,
+    "fats": 1.4
+  },
+  "milk oats": {
+    "calories": 75,
+    "protein": 3,
+    "carbs": 13,
+    "fats": 2
+  },
+  "chocolate oats": {
+    "calories": 85,
+    "protein": 3,
+    "carbs": 15,
+    "fats": 2.5
+  },
+  "protein oats": {
+    "calories": 80,
+    "protein": 7,
+    "carbs": 12,
+    "fats": 2
+  },
+  "protein oats bowl": {
+    "calories": 85,
+    "protein": 8,
+    "carbs": 12,
+    "fats": 2
+  },
+  "oats upma": {
+    "calories": 90,
+    "protein": 3,
+    "carbs": 15,
+    "fats": 2.5
+  },
+  "peanut butter": {
+    "calories": 588,
+    "protein": 25,
+    "carbs": 20,
+    "fats": 50
+  },
+  "almonds": {
+    "calories": 579,
+    "protein": 21,
+    "carbs": 22,
+    "fats": 50
+  },
+  "cashews": {
+    "calories": 553,
+    "protein": 18,
+    "carbs": 30,
+    "fats": 44
+  },
+  "walnuts": {
+    "calories": 654,
+    "protein": 15,
+    "carbs": 14,
+    "fats": 65
+  },
+  "chia seeds": {
+    "calories": 486,
+    "protein": 17,
+    "carbs": 42,
+    "fats": 31
+  },
+  "flax seeds": {
+    "calories": 534,
+    "protein": 18,
+    "carbs": 29,
+    "fats": 42
+  },
+  "dry fruits mix": {
+    "calories": 350,
+    "protein": 8,
+    "carbs": 40,
+    "fats": 18
+  },
+  "trail mix": {
+    "calories": 462,
+    "protein": 12,
+    "carbs": 48,
+    "fats": 26
+  },
+  "bread": {
+    "calories": 265,
+    "protein": 9,
+    "carbs": 49,
+    "fats": 3.2
+  },
+  "brown bread": {
+    "calories": 247,
+    "protein": 10,
+    "carbs": 45,
+    "fats": 3.4
+  },
+  "butter toast": {
+    "calories": 149,
+    "protein": 3.5,
+    "carbs": 16,
+    "fats": 8
+  },
+  "jam bread": {
+    "calories": 140,
+    "protein": 3,
+    "carbs": 27,
+    "fats": 1.5
+  },
+  "honey bread": {
+    "calories": 136,
+    "protein": 3,
+    "carbs": 26,
+    "fats": 1
+  },
+  "avocado toast": {
+    "calories": 195,
+    "protein": 5,
+    "carbs": 22,
+    "fats": 10
+  },
+  "peanut butter sandwich": {
+    "calories": 200,
+    "protein": 8,
+    "carbs": 22,
+    "fats": 10
+  },
+  "veg sandwich": {
+    "calories": 140,
+    "protein": 5,
+    "carbs": 24,
+    "fats": 3.5
+  },
+  "chicken sandwich": {
+    "calories": 185,
+    "protein": 14,
+    "carbs": 22,
+    "fats": 5
+  },
+  "cheese sandwich": {
+    "calories": 190,
+    "protein": 8,
+    "carbs": 22,
+    "fats": 8
+  },
+  "grilled sandwich": {
+    "calories": 195,
+    "protein": 8,
+    "carbs": 22,
+    "fats": 8
+  },
+  "paneer sandwich": {
+    "calories": 195,
+    "protein": 9,
+    "carbs": 22,
+    "fats": 8
+  },
+  "egg sandwich": {
+    "calories": 180,
+    "protein": 9,
+    "carbs": 20,
+    "fats": 8
+  },
+  "idli": {
+    "calories": 58,
+    "protein": 2,
+    "carbs": 12,
+    "fats": 0.2
+  },
+  "plain idli 2 pieces": {
+    "calories": 116,
+    "protein": 4,
+    "carbs": 24,
+    "fats": 0.4
+  },
+  "mini idli": {
+    "calories": 50,
+    "protein": 1.7,
+    "carbs": 10,
+    "fats": 0.2
+  },
+  "idli sambar": {
+    "calories": 80,
+    "protein": 3,
+    "carbs": 15,
+    "fats": 1
+  },
+  "dosa": {
+    "calories": 168,
+    "protein": 4,
+    "carbs": 27,
+    "fats": 3
+  },
+  "masala dosa": {
+    "calories": 185,
+    "protein": 5,
+    "carbs": 28,
+    "fats": 5
+  },
+  "butter dosa": {
+    "calories": 200,
+    "protein": 4,
+    "carbs": 27,
+    "fats": 7
+  },
+  "paper dosa": {
+    "calories": 155,
+    "protein": 4,
+    "carbs": 26,
+    "fats": 3
+  },
+  "set dosa": {
+    "calories": 170,
+    "protein": 4,
+    "carbs": 27,
+    "fats": 4
+  },
+  "rava dosa": {
+    "calories": 165,
+    "protein": 4,
+    "carbs": 26,
+    "fats": 4
+  },
+  "cheese dosa": {
+    "calories": 220,
+    "protein": 6,
+    "carbs": 26,
+    "fats": 10
+  },
+  "paneer dosa": {
+    "calories": 210,
+    "protein": 8,
+    "carbs": 26,
+    "fats": 8
+  },
+  "spring dosa": {
+    "calories": 195,
+    "protein": 5,
+    "carbs": 27,
+    "fats": 7
+  },
+  "sambar": {
+    "calories": 50,
+    "protein": 2.5,
+    "carbs": 8,
+    "fats": 1
+  },
+  "rasam": {
+    "calories": 30,
+    "protein": 1,
+    "carbs": 5,
+    "fats": 0.5
+  },
+  "upma": {
+    "calories": 110,
+    "protein": 3,
+    "carbs": 18,
+    "fats": 3
+  },
+  "poha": {
+    "calories": 110,
+    "protein": 2.5,
+    "carbs": 22,
+    "fats": 2
+  },
+  "medu vada": {
+    "calories": 97,
+    "protein": 3.5,
+    "carbs": 12,
+    "fats": 4.5
+  },
+  "onion uttapam": {
+    "calories": 120,
+    "protein": 3,
+    "carbs": 19,
+    "fats": 3
+  },
+  "tomato uttapam": {
+    "calories": 120,
+    "protein": 3,
+    "carbs": 20,
+    "fats": 3
+  },
+  "veg uttapam": {
+    "calories": 125,
+    "protein": 3.5,
+    "carbs": 20,
+    "fats": 3
+  },
+  "veg khichdi": {
+    "calories": 100,
+    "protein": 3.5,
+    "carbs": 18,
+    "fats": 2
+  },
+  "dal khichdi with ghee": {
+    "calories": 130,
+    "protein": 4.5,
+    "carbs": 20,
+    "fats": 4
+  },
+  "sabudana khichdi": {
+    "calories": 200,
+    "protein": 2,
+    "carbs": 38,
+    "fats": 5
+  },
+  "sabudana vada": {
+    "calories": 220,
+    "protein": 3,
+    "carbs": 32,
+    "fats": 10
+  },
+  "pav bhaji": {
+    "calories": 185,
+    "protein": 5,
+    "carbs": 28,
+    "fats": 7
+  },
+  "misal pav": {
+    "calories": 175,
+    "protein": 7,
+    "carbs": 26,
+    "fats": 6
+  },
+  "vada pav": {
+    "calories": 190,
+    "protein": 5,
+    "carbs": 28,
+    "fats": 7
+  },
+  "chicken keema pav": {
+    "calories": 200,
+    "protein": 12,
+    "carbs": 22,
+    "fats": 8
+  },
+  "paneer bhurji pav": {
+    "calories": 195,
+    "protein": 10,
+    "carbs": 22,
+    "fats": 9
+  },
+  "thepla": {
+    "calories": 150,
+    "protein": 4,
+    "carbs": 22,
+    "fats": 5
+  },
+  "dhokla": {
+    "calories": 160,
+    "protein": 6,
+    "carbs": 30,
+    "fats": 2
+  },
+  "khandvi": {
+    "calories": 140,
+    "protein": 5,
+    "carbs": 20,
+    "fats": 4
+  },
+  "tofu": {
+    "calories": 76,
+    "protein": 8,
+    "carbs": 2,
+    "fats": 4
+  },
+  "tofu stir fry": {
+    "calories": 110,
+    "protein": 9,
+    "carbs": 6,
+    "fats": 6
+  },
+  "soy chunks": {
+    "calories": 336,
+    "protein": 52,
+    "carbs": 33,
+    "fats": 0.5
+  },
+  "soy chunk curry": {
+    "calories": 130,
+    "protein": 13,
+    "carbs": 10,
+    "fats": 5
+  },
+  "quinoa": {
+    "calories": 120,
+    "protein": 4.4,
+    "carbs": 21,
+    "fats": 1.9
+  },
+  "whey protein": {
+    "calories": 120,
+    "protein": 24,
+    "carbs": 3,
+    "fats": 1
+  },
+  "whey isolate": {
+    "calories": 110,
+    "protein": 25,
+    "carbs": 2,
+    "fats": 0.5
+  },
+  "casein protein": {
+    "calories": 120,
+    "protein": 24,
+    "carbs": 3,
+    "fats": 1
+  },
+  "protein bar chocolate": {
+    "calories": 380,
+    "protein": 33,
+    "carbs": 37,
+    "fats": 13
+  },
+  "protein bar peanut": {
+    "calories": 390,
+    "protein": 33,
+    "carbs": 35,
+    "fats": 15
+  },
+  "protein brownie": {
+    "calories": 350,
+    "protein": 25,
+    "carbs": 32,
+    "fats": 13
+  },
+  "protein pancakes": {
+    "calories": 200,
+    "protein": 16,
+    "carbs": 24,
+    "fats": 5
+  },
+  "protein ladoo": {
+    "calories": 200,
+    "protein": 10,
+    "carbs": 18,
+    "fats": 10
+  },
+  "energy bar": {
+    "calories": 350,
+    "protein": 10,
+    "carbs": 45,
+    "fats": 14
+  },
+  "burger": {
+    "calories": 295,
+    "protein": 17,
+    "carbs": 30,
+    "fats": 12
+  },
+  "veg burger": {
+    "calories": 270,
+    "protein": 8,
+    "carbs": 34,
+    "fats": 11
+  },
+  "chicken burger": {
+    "calories": 310,
+    "protein": 18,
+    "carbs": 30,
+    "fats": 13
+  },
+  "paneer burger": {
+    "calories": 300,
+    "protein": 13,
+    "carbs": 31,
+    "fats": 14
+  },
+  "pizza": {
+    "calories": 266,
+    "protein": 11,
+    "carbs": 33,
+    "fats": 10
+  },
+  "veg pizza": {
+    "calories": 250,
+    "protein": 10,
+    "carbs": 34,
+    "fats": 9
+  },
+  "cheese pizza": {
+    "calories": 280,
+    "protein": 12,
+    "carbs": 32,
+    "fats": 12
+  },
+  "paneer pizza": {
+    "calories": 270,
+    "protein": 12,
+    "carbs": 32,
+    "fats": 11
+  },
+  "fries": {
+    "calories": 312,
+    "protein": 3.4,
+    "carbs": 41,
+    "fats": 15
+  },
+  "french fries salted": {
+    "calories": 312,
+    "protein": 3.4,
+    "carbs": 41,
+    "fats": 15
+  },
+  "peri peri fries": {
+    "calories": 330,
+    "protein": 3.5,
+    "carbs": 43,
+    "fats": 16
+  },
+  "nachos": {
+    "calories": 490,
+    "protein": 7,
+    "carbs": 62,
+    "fats": 24
+  },
+  "tacos": {
+    "calories": 215,
+    "protein": 9,
+    "carbs": 22,
+    "fats": 11
+  },
+  "hot dog": {
+    "calories": 290,
+    "protein": 10,
+    "carbs": 28,
+    "fats": 16
+  },
+  "wrap": {
+    "calories": 200,
+    "protein": 8,
+    "carbs": 26,
+    "fats": 7
+  },
+  "chicken wrap": {
+    "calories": 225,
+    "protein": 14,
+    "carbs": 26,
+    "fats": 8
+  },
+  "veg momos": {
+    "calories": 160,
+    "protein": 5,
+    "carbs": 28,
+    "fats": 3
+  },
+  "chicken momos": {
+    "calories": 175,
+    "protein": 11,
+    "carbs": 24,
+    "fats": 5
+  },
+  "veg momos steamed": {
+    "calories": 155,
+    "protein": 5,
+    "carbs": 27,
+    "fats": 2
+  },
+  "chicken momos steamed": {
+    "calories": 170,
+    "protein": 11,
+    "carbs": 23,
+    "fats": 4
+  },
+  "fried momos": {
+    "calories": 220,
+    "protein": 7,
+    "carbs": 26,
+    "fats": 10
+  },
+  "paneer momos": {
+    "calories": 185,
+    "protein": 8,
+    "carbs": 24,
+    "fats": 7
+  },
+  "veg noodles": {
+    "calories": 140,
+    "protein": 4,
+    "carbs": 25,
+    "fats": 4
+  },
+  "chicken noodles": {
+    "calories": 160,
+    "protein": 9,
+    "carbs": 24,
+    "fats": 5
+  },
+  "veg hakka noodles": {
+    "calories": 145,
+    "protein": 4,
+    "carbs": 25,
+    "fats": 4
+  },
+  "schezwan noodles": {
+    "calories": 155,
+    "protein": 4.5,
+    "carbs": 26,
+    "fats": 5
+  },
+  "egg noodles": {
+    "calories": 150,
+    "protein": 6,
+    "carbs": 24,
+    "fats": 5
+  },
+  "veg pasta red sauce": {
+    "calories": 150,
+    "protein": 5,
+    "carbs": 27,
+    "fats": 3
+  },
+  "chicken pasta": {
+    "calories": 175,
+    "protein": 10,
+    "carbs": 26,
+    "fats": 5
+  },
+  "cheese pasta": {
+    "calories": 200,
+    "protein": 7,
+    "carbs": 26,
+    "fats": 8
+  },
+  "veg pasta white sauce": {
+    "calories": 195,
+    "protein": 6,
+    "carbs": 25,
+    "fats": 9
+  },
+  "salad": {
+    "calories": 50,
+    "protein": 2,
+    "carbs": 8,
+    "fats": 1.5
+  },
+  "fruit salad": {
+    "calories": 65,
+    "protein": 1,
+    "carbs": 16,
+    "fats": 0.5
+  },
+  "caesar salad": {
+    "calories": 120,
+    "protein": 5,
+    "carbs": 7,
+    "fats": 9
+  },
+  "broccoli salad": {
+    "calories": 90,
+    "protein": 4,
+    "carbs": 8,
+    "fats": 5
+  },
+  "veg salad with dressing": {
+    "calories": 90,
+    "protein": 2.5,
+    "carbs": 8,
+    "fats": 6
+  },
+  "veg soup": {
+    "calories": 35,
+    "protein": 1.5,
+    "carbs": 6,
+    "fats": 0.8
+  },
+  "tomato soup": {
+    "calories": 40,
+    "protein": 1.5,
+    "carbs": 7,
+    "fats": 1
+  },
+  "spinach soup": {
+    "calories": 35,
+    "protein": 2,
+    "carbs": 5,
+    "fats": 1
+  },
+  "corn soup": {
+    "calories": 45,
+    "protein": 1.5,
+    "carbs": 9,
+    "fats": 0.8
+  },
+  "manchow soup": {
+    "calories": 50,
+    "protein": 2.5,
+    "carbs": 8,
+    "fats": 1.5
+  },
+  "sweet corn soup": {
+    "calories": 48,
+    "protein": 2,
+    "carbs": 9,
+    "fats": 1
+  },
+  "veg clear soup": {
+    "calories": 25,
+    "protein": 1,
+    "carbs": 4,
+    "fats": 0.5
+  },
+  "chicken clear soup": {
+    "calories": 35,
+    "protein": 4,
+    "carbs": 2,
+    "fats": 1
+  },
+  "veg clear noodles soup": {
+    "calories": 55,
+    "protein": 2,
+    "carbs": 10,
+    "fats": 1
+  },
+  "chicken noodle soup": {
+    "calories": 60,
+    "protein": 5,
+    "carbs": 7,
+    "fats": 1.5
+  },
+  "achar": {
+    "calories": 75,
+    "protein": 1,
+    "carbs": 8,
+    "fats": 4
+  },
+  "mix veg": {
+    "calories": 80,
+    "protein": 3,
+    "carbs": 10,
+    "fats": 4
+  },
+  "aloo sabzi": {
+    "calories": 100,
+    "protein": 2,
+    "carbs": 16,
+    "fats": 4
+  },
+  "bhindi sabzi": {
+    "calories": 90,
+    "protein": 2.5,
+    "carbs": 10,
+    "fats": 4
+  },
+  "baingan bharta": {
+    "calories": 95,
+    "protein": 2.5,
+    "carbs": 9,
+    "fats": 5
+  },
+  "aloo gobi": {
+    "calories": 95,
+    "protein": 2.5,
+    "carbs": 12,
+    "fats": 4
+  },
+  "cabbage sabzi": {
+    "calories": 75,
+    "protein": 2,
+    "carbs": 8,
+    "fats": 4
+  },
+  "mushroom curry": {
+    "calories": 110,
+    "protein": 4,
+    "carbs": 7,
+    "fats": 8
+  },
+  "mushroom fry": {
+    "calories": 120,
+    "protein": 4,
+    "carbs": 6,
+    "fats": 9
+  },
+  "veg curry": {
+    "calories": 90,
+    "protein": 3,
+    "carbs": 11,
+    "fats": 4
+  },
+  "veg kofta": {
+    "calories": 165,
+    "protein": 5,
+    "carbs": 16,
+    "fats": 10
+  },
+  "malai kofta": {
+    "calories": 195,
+    "protein": 5.5,
+    "carbs": 16,
+    "fats": 13
+  },
+  "boiled potato": {
+    "calories": 87,
+    "protein": 1.9,
+    "carbs": 20,
+    "fats": 0.1
+  },
+  "sweet potato": {
+    "calories": 86,
+    "protein": 1.6,
+    "carbs": 20,
+    "fats": 0.1
+  },
+  "boiled corn": {
+    "calories": 96,
+    "protein": 3.4,
+    "carbs": 21,
+    "fats": 1.5
+  },
+  "boiled corn chaat": {
+    "calories": 105,
+    "protein": 3.5,
+    "carbs": 22,
+    "fats": 2
+  },
+  "butter corn": {
+    "calories": 140,
+    "protein": 3.4,
+    "carbs": 21,
+    "fats": 6
+  },
+  "popcorn": {
+    "calories": 375,
+    "protein": 11,
+    "carbs": 74,
+    "fats": 4
+  },
+  "butter popcorn": {
+    "calories": 435,
+    "protein": 8,
+    "carbs": 62,
+    "fats": 20
+  },
+  "chips": {
+    "calories": 536,
+    "protein": 7,
+    "carbs": 53,
+    "fats": 35
+  },
+  "biscuit": {
+    "calories": 458,
+    "protein": 7,
+    "carbs": 65,
+    "fats": 20
+  },
+  "cream biscuit": {
+    "calories": 495,
+    "protein": 6,
+    "carbs": 68,
+    "fats": 24
+  },
+  "rusk": {
+    "calories": 395,
+    "protein": 10,
+    "carbs": 70,
+    "fats": 8
+  },
+  "granola": {
+    "calories": 471,
+    "protein": 10,
+    "carbs": 64,
+    "fats": 20
+  },
+  "granola bar": {
+    "calories": 400,
+    "protein": 8,
+    "carbs": 60,
+    "fats": 14
+  },
+  "pancakes": {
+    "calories": 200,
+    "protein": 5.5,
+    "carbs": 33,
+    "fats": 6
+  },
+  "waffles": {
+    "calories": 291,
+    "protein": 7.9,
+    "carbs": 37,
+    "fats": 13
+  },
+  "donut": {
+    "calories": 452,
+    "protein": 5,
+    "carbs": 51,
+    "fats": 25
+  },
+  "brownie": {
+    "calories": 466,
+    "protein": 5.5,
+    "carbs": 60,
+    "fats": 24
+  },
+  "cupcake": {
+    "calories": 440,
+    "protein": 4,
+    "carbs": 55,
+    "fats": 22
+  },
+  "chocolate cake": {
+    "calories": 371,
+    "protein": 5,
+    "carbs": 53,
+    "fats": 17
+  },
+  "vanilla cake": {
+    "calories": 350,
+    "protein": 4.5,
+    "carbs": 50,
+    "fats": 15
+  },
+  "black forest cake": {
+    "calories": 380,
+    "protein": 5,
+    "carbs": 52,
+    "fats": 18
+  },
+  "red velvet cake": {
+    "calories": 366,
+    "protein": 5,
+    "carbs": 48,
+    "fats": 18
+  },
+  "butterscotch cake": {
+    "calories": 360,
+    "protein": 5,
+    "carbs": 47,
+    "fats": 18
+  },
+  "pastry": {
+    "calories": 360,
+    "protein": 5,
+    "carbs": 45,
+    "fats": 18
+  },
+  "chocolate pastry": {
+    "calories": 370,
+    "protein": 5,
+    "carbs": 46,
+    "fats": 18
+  },
+  "lava cake": {
+    "calories": 380,
+    "protein": 5,
+    "carbs": 48,
+    "fats": 20
+  },
+  "kulfi": {
+    "calories": 200,
+    "protein": 5,
+    "carbs": 24,
+    "fats": 10
+  },
+  "kulfi falooda": {
+    "calories": 220,
+    "protein": 5.5,
+    "carbs": 30,
+    "fats": 10
+  },
+  "ice cream cone": {
+    "calories": 220,
+    "protein": 4,
+    "carbs": 28,
+    "fats": 11
+  },
+  "butterscotch ice cream": {
+    "calories": 210,
+    "protein": 3.5,
+    "carbs": 25,
+    "fats": 11
+  },
+  "protein ice cream": {
+    "calories": 160,
+    "protein": 13,
+    "carbs": 18,
+    "fats": 4
+  },
+  "milk bar ice cream": {
+    "calories": 180,
+    "protein": 3,
+    "carbs": 22,
+    "fats": 9
+  },
+  "soft serve ice cream": {
+    "calories": 170,
+    "protein": 3.5,
+    "carbs": 22,
+    "fats": 8
+  },
+  "choco bar": {
+    "calories": 245,
+    "protein": 3,
+    "carbs": 30,
+    "fats": 13
+  },
+  "falooda": {
+    "calories": 180,
+    "protein": 4,
+    "carbs": 30,
+    "fats": 5
+  },
+  "falooda ice cream": {
+    "calories": 210,
+    "protein": 4.5,
+    "carbs": 33,
+    "fats": 8
+  },
+  "rasmalai": {
+    "calories": 185,
+    "protein": 6,
+    "carbs": 23,
+    "fats": 8
+  },
+  "rabri": {
+    "calories": 210,
+    "protein": 6,
+    "carbs": 25,
+    "fats": 10
+  },
+  "kheer": {
+    "calories": 150,
+    "protein": 4,
+    "carbs": 22,
+    "fats": 6
+  },
+  "peda": {
+    "calories": 360,
+    "protein": 7,
+    "carbs": 54,
+    "fats": 13
+  },
+  "milk peda": {
+    "calories": 360,
+    "protein": 7,
+    "carbs": 55,
+    "fats": 13
+  },
+  "soan papdi": {
+    "calories": 440,
+    "protein": 6,
+    "carbs": 58,
+    "fats": 22
+  },
+  "besan ladoo": {
+    "calories": 480,
+    "protein": 9,
+    "carbs": 57,
+    "fats": 25
+  },
+  "gajar halwa": {
+    "calories": 270,
+    "protein": 4.5,
+    "carbs": 36,
+    "fats": 12
+  },
+  "moong dal halwa": {
+    "calories": 320,
+    "protein": 6,
+    "carbs": 38,
+    "fats": 16
+  },
+  "gulab jamun": {
+    "calories": 387,
+    "protein": 5,
+    "carbs": 60,
+    "fats": 15
+  },
+  "rasgulla": {
+    "calories": 186,
+    "protein": 3.5,
+    "carbs": 40,
+    "fats": 2
+  },
+  "peanut chikki": {
+    "calories": 480,
+    "protein": 12,
+    "carbs": 52,
+    "fats": 26
+  },
+  "til chikki": {
+    "calories": 490,
+    "protein": 10,
+    "carbs": 52,
+    "fats": 28
+  },
+  "chocolate bar": {
+    "calories": 535,
+    "protein": 5.5,
+    "carbs": 60,
+    "fats": 30
+  },
+  "snickers": {
+    "calories": 488,
+    "protein": 8,
+    "carbs": 61,
+    "fats": 24
+  },
+  "kitkat": {
+    "calories": 518,
+    "protein": 6,
+    "carbs": 62,
+    "fats": 27
+  },
+  "dairy milk": {
+    "calories": 535,
+    "protein": 7,
+    "carbs": 60,
+    "fats": 30
+  },
+  "munch": {
+    "calories": 510,
+    "protein": 5,
+    "carbs": 63,
+    "fats": 26
+  },
+  "veg spring roll fried": {
+    "calories": 190,
+    "protein": 4,
+    "carbs": 23,
+    "fats": 10
+  },
+  "chicken spring roll": {
+    "calories": 210,
+    "protein": 9,
+    "carbs": 22,
+    "fats": 11
+  },
+  "veg manchurian dry": {
+    "calories": 170,
+    "protein": 5,
+    "carbs": 18,
+    "fats": 9
+  },
+  "chicken manchurian dry": {
+    "calories": 190,
+    "protein": 13,
+    "carbs": 13,
+    "fats": 10
+  },
+  "paneer manchurian": {
+    "calories": 195,
+    "protein": 10,
+    "carbs": 14,
+    "fats": 12
+  },
+  "falafel": {
+    "calories": 333,
+    "protein": 13,
+    "carbs": 32,
+    "fats": 18
+  },
+  "hummus": {
+    "calories": 166,
+    "protein": 8,
+    "carbs": 14,
+    "fats": 10
+  },
+  "garlic bread": {
+    "calories": 350,
+    "protein": 8,
+    "carbs": 42,
+    "fats": 17
+  },
+  "garlic bread cheese": {
+    "calories": 400,
+    "protein": 11,
+    "carbs": 42,
+    "fats": 22
+  },
+  "cheese balls": {
+    "calories": 380,
+    "protein": 10,
+    "carbs": 26,
+    "fats": 28
+  },
+  "cheese slice": {
+    "calories": 371,
+    "protein": 22,
+    "carbs": 5,
+    "fats": 30
+  },
+  "cheddar cheese": {
+    "calories": 403,
+    "protein": 25,
+    "carbs": 1.3,
+    "fats": 33
+  },
+  "mozzarella cheese": {
+    "calories": 280,
+    "protein": 28,
+    "carbs": 2.2,
+    "fats": 17
+  },
+  "veg thali": {
+    "calories": 600,
+    "protein": 20,
+    "carbs": 80,
+    "fats": 20
+  },
+  "non veg thali": {
+    "calories": 750,
+    "protein": 35,
+    "carbs": 80,
+    "fats": 30
+  },
+  "dahi vada": {
+    "calories": 130,
+    "protein": 5,
+    "carbs": 18,
+    "fats": 5
+  },
+  "papdi chaat": {
+    "calories": 155,
+    "protein": 4,
+    "carbs": 23,
+    "fats": 6
+  },
+  "ragda pattice": {
+    "calories": 170,
+    "protein": 5,
+    "carbs": 27,
+    "fats": 6
+  },
+  "corn chaat": {
+    "calories": 120,
+    "protein": 3.5,
+    "carbs": 20,
+    "fats": 3.5
+  },
+  "sweet corn salad": {
+    "calories": 110,
+    "protein": 3,
+    "carbs": 22,
+    "fats": 2
+  },
+  "egg roll": {
+    "calories": 190,
+    "protein": 8,
+    "carbs": 22,
+    "fats": 8
+  },
+  "chicken roll": {
+    "calories": 210,
+    "protein": 13,
+    "carbs": 22,
+    "fats": 8
+  },
+  "paneer roll": {
+    "calories": 200,
+    "protein": 10,
+    "carbs": 22,
+    "fats": 9
+  },
+  "veg roll spicy": {
+    "calories": 185,
+    "protein": 5,
+    "carbs": 24,
+    "fats": 8
+  },
+  "veg frankie": {
+    "calories": 175,
+    "protein": 5,
+    "carbs": 24,
+    "fats": 7
+  },
+  "chicken frankie": {
+    "calories": 210,
+    "protein": 13,
+    "carbs": 23,
+    "fats": 8
+  },
+  "veg shawarma": {
+    "calories": 195,
+    "protein": 7,
+    "carbs": 22,
+    "fats": 9
+  },
+  "chicken shawarma": {
+    "calories": 230,
+    "protein": 15,
+    "carbs": 22,
+    "fats": 10
+  },
+  "veg cutlet": {
+    "calories": 160,
+    "protein": 4,
+    "carbs": 20,
+    "fats": 8
+  },
+  "chicken cutlet": {
+    "calories": 210,
+    "protein": 14,
+    "carbs": 14,
+    "fats": 11
+  },
+  "veg nuggets": {
+    "calories": 220,
+    "protein": 6,
+    "carbs": 23,
+    "fats": 12
+  },
+  "chicken nuggets": {
+    "calories": 243,
+    "protein": 14,
+    "carbs": 15,
+    "fats": 15
+  },
+  "veg puff": {
+    "calories": 245,
+    "protein": 4,
+    "carbs": 26,
+    "fats": 14
+  },
+  "egg puff": {
+    "calories": 265,
+    "protein": 8,
+    "carbs": 25,
+    "fats": 16
+  },
+  "chicken puff": {
+    "calories": 285,
+    "protein": 12,
+    "carbs": 25,
+    "fats": 17
+  },
+  "paneer biryani": {
+    "calories": 170,
+    "protein": 7,
+    "carbs": 26,
+    "fats": 6
+  },
+  "chicken biryani with raita": {
+    "calories": 185,
+    "protein": 13,
+    "carbs": 24,
+    "fats": 5.5
+  },
+  "veg biryani with raita": {
+    "calories": 165,
+    "protein": 5,
+    "carbs": 28,
+    "fats": 4
+  },
+  "protein bar": {
+    "calories": 380,
+    "protein": 33,
+    "carbs": 37,
+    "fats": 13
+  },
+  "ice gola": {
+    "calories": 60,
+    "protein": 0,
+    "carbs": 15,
+    "fats": 0
+  }
 }

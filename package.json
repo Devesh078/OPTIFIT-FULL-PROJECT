@@ -1,20 +1,5 @@
 {
-  "name": "optifit",
-  "version": "1.0.0",
-  "description": "",
-  "homepage": "https://github.com/Devesh078/OPTIFIT#readme",
-  "bugs": {
-    "url": "https://github.com/Devesh078/OPTIFIT/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Devesh078/OPTIFIT.git"
-  },
-  "license": "ISC",
-  "author": "",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
   }
 }
